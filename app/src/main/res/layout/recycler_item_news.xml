@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -10,11 +10,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:scaleType="centerCrop"
+            android:id="@+id/imgHeaderBerita"
             android:src="@mipmap/ic_launcher"
             android:layout_height="200dp"/>
         <TextView
             android:layout_width="match_parent"
             android:textStyle="bold"
+            android:id="@+id/tvJudulBerita"
             android:textColor="@android:color/black"
             android:text="JUDUL BERITA"
             android:textSize="21sp"
