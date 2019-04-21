@@ -1,5 +1,6 @@
 package com.setyo.newsapplication.screen.main
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -7,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.widget.Toast
 import com.setyo.newsapplication.R
 import com.setyo.newsapplication.model.ArticlesItem
+import com.setyo.newsapplication.screen.detail.DetailActivity
 import org.jetbrains.anko.find
 
 
@@ -39,7 +41,10 @@ class MainActivity : AppCompatActivity(),MainView {
     }
 
     private fun partItemClicked(partItem: ArticlesItem) {
-        Toast.makeText(this,partItem.description,Toast.LENGTH_LONG).show()
+
+        val intent = Intent(this,DetailActivity::class.java)
+        intent.putExtra("dataParcel",partItem)
+        startActivity(intent)
 
     }
 
